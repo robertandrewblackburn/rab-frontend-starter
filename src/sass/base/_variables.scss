@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/*
+* Basic Color Variables
+*/
+$red: #d25653;
+$green: #34a33f;
+$blue: #5bade1;
+$purple: #7647b5;
+$yellow: #f6d936;
+
+$white: #FFFFFF;
+$lighter-grey: #f8f8f8;
+$light-grey: #ccc;
+$grey: #8e8e8e;
+$dark-grey: #4d4d4d;
+$black: #222222;
+
+/*
+ * Semantic Colors
+ */
+$theme-color: $blue;
+$secondary-color: $red;
+$highlight-color: $yellow;
+$font-color: $black;
+
+/*
+ * Gradients
+ */
+$gradient-full: linear-gradient(to right, $red, $blue, $green, $light-grey);

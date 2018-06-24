@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+// common Japanese font stacks
+$yumin: "Times New Roman", "游明朝", YuMincho, "Hiragino Mincho ProN", Meiryo, serif;
+$meiryo:"メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", "游ゴシック", YuGothic, sans-serif;
+$yugothic:"游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, Verdana, sans-serif;
+$hiragino:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, Meiryo, Verdana, sans-serif;
+
+@import url(https://fonts.googleapis.com/earlyaccess/hannari.css);
+$hannari: "Hannari", "游明朝", YuMincho, serif;
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+$noto: "Noto Sans Japanese", "メイリオ", Meiryo, "游ゴシック", YuGothic, sans-serif;
+
+$sans: $noto;
+$serif: $yumin;
+
+html { font-size: 16px; }
+
+body {
+	font-family: $sans;
+	font-size: 1em;
+	font-weight: 400;
+	color: $font-color;
+}
+// better text spacing for Japanese pages
+html[lang="ja"] body { letter-spacing: 0.1em; }
+
+p {
+  width: 100%; // fix for IE11 flex bugs
+	font-size: 1em;
+  line-height: 1.4;
+	color: inherit;
+}
+
+h1, h2, h3, h4, h5 {}
+
+h1 { }
+
+// styling for vertical Japanese text
+.vertical {
+	-ms-writing-mode: tb-rl;
+	-webkit-writing-mode: vertical-rl;
+	-moz-writing-mode: vertical-rl;
+	-ms-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
+	-webkit-text-orientation: upright;
+	-moz-text-orientation: upright;
+	-ms-text-orientation: upright;
+	text-orientation: upright;
+}
+
+// fix for offset Japanese fonts in IE11
+.ie11Fix {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { padding-top: 0.2em; }
+}

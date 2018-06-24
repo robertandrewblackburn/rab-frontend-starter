@@ -1,0 +1,39 @@
+{
+  "name": "rab-frontend-starter",
+  "version": "1.0.0",
+  "description": "A simple template for frontend (static) websites, including Webpack configured to handle Sass and ECMAScript2015 (ES6).",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack -w --display-max-modules 0 --mode development",
+    "build:prod": "webpack --mode production",
+    "build:dev": "webpack --mode development"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.6.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.24.4",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "concurrently": "^3.5.1",
+    "css-loader": "^0.28.11",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.9.0",
+    "nodemon": "^1.17.5",
+    "postcss-loader": "^2.1.5",
+    "sass-loader": "^7.0.3",
+    "webpack": "^4.11.1",
+    "webpack-cli": "^3.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertandrewblackburn/rab-frontend-starter.git"
+  },
+  "author": "Robert Andrew Blackburn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robertandrewblackburn/rab-frontend-starter/issues"
+  },
+  "homepage": "https://github.com/robertandrewblackburn/rab-frontend-starter#readme"
+}

@@ -1,0 +1,78 @@
+@mixin ie-only() {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
+
+@mixin sp-portrait() {
+  @media only screen and (max-width:#{$pc-width - 1}) and (orientation:portrait) {
+    @content;
+  }
+
+}@mixin sp-landscape() {
+  @media only screen and (max-width:#{$pc-width - 1}) and (orientation:landscape) {
+    @content;
+  }
+}
+
+@mixin min-xxs() {
+  @media only screen and (min-width:$screen-xxs){
+    @content;
+  }
+}
+@mixin min-xs() {
+  @media only screen and (min-width:$screen-xs){
+    @content;
+  }
+}
+@mixin min-sm() {
+  @media only screen and (min-width:$screen-sm){
+    @content;
+  }
+}
+@mixin min-md() {
+  @media only screen and (min-width:$screen-md){
+    @content;
+  }
+}
+@mixin min-lg() {
+  @media only screen and (min-width:$screen-lg){
+    @content;
+  }
+}
+@mixin min-xl() {
+  @media only screen and (min-width:$screen-xl){
+    @content;
+  }
+}
+
+@mixin max-xxs() {
+  @media only screen and (max-width:$screen-xxs - 1){
+    @content;
+  }
+}
+@mixin max-xs() {
+  @media only screen and (max-width:$screen-xs - 1){
+    @content;
+  }
+}
+@mixin max-sm() {
+  @media only screen and (max-width:$screen-sm - 1){
+    @content;
+  }
+}
+@mixin max-md() {
+  @media only screen and (max-width:$screen-md - 1){
+    @content;
+  }
+}
+@mixin max-lg() {
+  @media only screen and (max-width:$screen-lg - 1){
+    @content;
+  }
+}
+@mixin max-xl() {
+  @media only screen and (max-width:$screen-xl - 1){
+    @content;
+  }
+}

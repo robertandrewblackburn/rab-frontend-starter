@@ -1,0 +1,231 @@
+@charset "UTF-8";
+/* Breakpoints ブレークポイント */
+// 320px displays are smallest supported
+$screen-xxs: 360px; //modern smartphones
+$screen-xs: 568px; //landscape phones
+$screen-sm: 768px; //tablets
+$screen-md: 992px; //landscape tablets, PC
+$screen-lg: 1200px; //wide pcs
+$screen-xl: 2560px; //1440p+ displays
+
+// container width on desktop displays
+$pc-width: $screen-md;
+
+$gutterLg: 2em;
+$gutter: 20px;
+
+//responsive display/hidden tags (for line breaks etc)
+/* small smartphones */
+.xxs-down {
+  @media only screen and (min-width:$screen-xs){
+    display: none !important;
+  }
+}
+/* landscape smartphones and below */
+.xs-down {
+  @media only screen and (min-width:$screen-sm){
+    display: none !important;
+  }
+}
+.xs-up {
+  @media only screen and (max-width:#{$screen-xs - 1}){
+    display: none !important;
+  }
+}
+/* tablets and below */
+.sm-down {
+  @media only screen and (min-width:$screen-md){
+    display: none !important;
+  }
+}
+/* tablets and up */
+.sm-up {
+  @media only screen and (max-width:#{$screen-sm - 1}){
+    display: none !important;
+  }
+}
+/* pc and below */
+.md-down {
+  @media only screen and (max-width:#{$screen-md - 1}){
+    display: none !important;
+  }
+}
+/* pc and up */
+.md-up {
+  @media only screen and (max-width:#{$screen-md - 1}){
+    display: none !important;
+  }
+}
+/* lg and below */
+.lg-down {
+  @media only screen and (max-width:#{$screen-lg - 1}){
+    display: none !important;
+  }
+}
+/* lg and up */
+.lg-up {
+  @media only screen and (max-width:#{$screen-lg - 1}){
+    display: none !important;
+  }
+}
+
+.container {
+  width:100%;
+  max-width: 100%;
+  margin: 0 auto;
+  @media only screen and (min-width: $pc-width){ width: $pc-width; }
+}
+.container-lg {
+  @extend .container;
+  @include min-md { width: 100%; }
+  @include min-lg { width: $screen-lg; }
+}
+.flex-container {
+  @extend .container;
+  display: flex;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+// row with guttering
+.row-gutter {
+  @extend .row;
+  .col { margin: 0 calc(#{$gutter} / 2) $gutter; }
+  // no outside gutters (for space-between designs)
+  &.jcsb {
+    width: auto;
+    margin: 0 calc(-#{$gutter} / 2);
+    .col-11 { width: calc(91.667% - #{$gutter}); }
+    .col-10 { width: calc(83.333% - #{$gutter}); }
+    .col-9 { width: calc(75% - #{$gutter}); }
+    .col-8 { width: calc(66.667% - #{$gutter}); }
+    .col-7 { width: calc(58.333% - #{$gutter}); }
+    .col-6 { width: calc(50% - #{$gutter}); }
+    .col-5 { width: calc(41.667% - #{$gutter}); }
+    .col-4 { width: calc(33.33% - #{$gutter}); }
+    .col-3 { width: calc(25% - #{$gutter}); }
+    .col-2 { width: calc(16.667% - #{$gutter}); }
+    .col-1 { width: calc(8.333% - #{$gutter}); }
+  }
+}
+
+.aifs {align-items: flex-start;}
+.aic {align-items: center;}
+.aife {align-items: flex-end;}
+
+.jcfs {justify-content: flex-start;}
+.jcc {justify-content: center;}
+.jcfe {justify-content: flex-end;}
+.jcsb {justify-content: space-between;}
+.jcsa {justify-content: space-around;}
+
+
+.col {
+  flex-grow: 1;
+}
+/* Column sizes with no breakpoints */
+.col-12 {
+  @extend .col;
+}
+.col-11 {
+  @extend .col;
+  width: 91.667%;
+  flex-grow: 0;
+  &.gtrLg { width: calc(91.667% - #{$gutterLg}); }
+}
+.col-10 {
+  @extend .col;
+  width: 83.333%;
+  flex-grow: 0;
+  &.gtrLg { width: calc(83.333% - #{$gutterLg}); }
+}
+.col-9 {
+  @extend .col;
+  width: 75%;
+  flex-grow: 0;
+  &.gtrLg { width: calc(75% - #{$gutterLg}); }
+}
+.col-8 {
+  @extend .col;
+  width: 66.667%;
+  flex-grow: 0;
+  &.gtrLg { width: calc(66.667% - #{$gutterLg}); }
+}
+.col-7 {
+  @extend .col;
+  width: 58.333%;
+  flex-grow: 0;
+  &.gtrLg { width: calc(58.333% - #{$gutterLg}); }
+}
+.col-6 {
+  @extend .col;
+  width: 50%;
+  flex-grow: 0;
+  &.gtrLg { width: calc(50% - #{$gutterLg}); }
+
+}
+.col-5 {
+  @extend .col;
+  width: 41.667%;
+  flex-grow: 0;
+  &.gtrLg { width: calc(41.667% - #{$gutterLg}); }
+}
+.col-4 {
+  @extend .col;
+  width: 33.33%;
+  flex-grow: 0;
+  &.gtrLg { width: calc(33.33% - #{$gutterLg}); }
+
+}
+.col-3 {
+  @extend .col;
+  width:25%;
+  flex-grow: 0;
+  &.gtrLg { width: calc(25% - #{$gutterLg}); }
+}
+.col-2 {
+  @extend .col;
+  width:16.667%;
+  flex-grow: 0;
+  &.gtrLg { width: calc(16.667% - #{$gutterLg}); }
+
+}
+.col-1 {
+  @extend .col;
+  width:8.333%;
+  flex-grow: 0;
+  &.gtrLg { width: calc(8.333% - #{$gutterLg}); }
+}
+
+/* Full-width column breakpoints */
+/* Smartphone columns */
+.col-xxs {
+  @extend .col;
+  @include max-xxs {width: 100% !important;}
+}
+/* landscape smartphones (560px) breakpoint */
+.col-xs {
+  @extend .col;
+  @include max-xs {width: 100% !important;}
+}
+/* small (768px) breakpoint */
+.col-sm {
+  @extend .col;
+  @include max-sm {width: 100% !important;}
+}
+/* medium (992px) breakpoint */
+.col-md {
+  @extend .col;
+  @include max-md {width: 100% !important;}
+}
+/* large (1200px) breakpoint */
+.col-lg {
+  @extend .col;
+  @include max-lg {width: 100% !important;}
+}

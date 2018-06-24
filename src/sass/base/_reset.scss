@@ -1,0 +1,25 @@
+html { box-sizing: border-box; }
+
+*, *:before, *:after { box-sizing: inherit; }
+
+// responsive images
+img {
+  max-width: 100%;
+  height: auto;
+  -webkit-backface-visibility: visible;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  &:focus { outline: none; }
+}

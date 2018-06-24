@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+body {
+  background: $white;
+  // class for when displaying overlays/modals
+  &.scrollLock {overflow-y: hidden;}
+}
