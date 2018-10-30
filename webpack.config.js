@@ -26,7 +26,8 @@ module.exports = (env, argv) => {
         loader: 'css-loader',
         options: {
           sourceMap: true,
-          minimize: WEBPACK_MODE === 'production'
+          minimize: WEBPACK_MODE === 'production',
+          url: false,
         }
       },
       {
@@ -44,7 +45,7 @@ module.exports = (env, argv) => {
   // config object
   const config = {
     entry: {
-      main: './src/js/main.js'
+      main: './src/js/main.js',
     },
     devtool: 'source-map',
     output: {
