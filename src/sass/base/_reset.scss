@@ -1,12 +1,19 @@
-html { box-sizing: border-box; }
+// my own resets and preferences
+html {
+  box-sizing: border-box;
+}
 
-*, *:before, *:after { box-sizing: inherit; }
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 // responsive images
 img {
   max-width: 100%;
   height: auto;
-  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
 }
 
 ul {
@@ -21,5 +28,7 @@ button {
   background: none;
   border: none;
   cursor: pointer;
-  &:focus { outline: none; }
+  &:focus {
+    outline: none;
+  }
 }

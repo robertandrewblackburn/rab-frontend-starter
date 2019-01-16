@@ -14,42 +14,26 @@ $noto: "Noto Sans Japanese", "メイリオ", Meiryo, "游ゴシック", YuGothic
 $sans: $noto;
 $serif: $yumin;
 
-html { font-size: 16px; }
+html {
+  font-size: 16px;
+}
 
 body {
-	font-family: $sans;
-	font-size: 1em;
-	font-weight: 400;
-	color: $font-color;
+  font-family: $sans;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: $font-color;
+  @include min-sm {
+    font-size: 1rem;
+  }
 }
-// better text spacing for Japanese pages
-html[lang="ja"] body { letter-spacing: 0.1em; }
+
+*[lang='ja'] {
+  letter-spacing: 0.1em;
+}
 
 p {
   width: 100%; // fix for IE11 flex bugs
-	font-size: 1em;
   line-height: 1.4;
-	color: inherit;
-}
-
-h1, h2, h3, h4, h5 {}
-
-h1 { }
-
-// styling for vertical Japanese text
-.vertical {
-	-ms-writing-mode: tb-rl;
-	-webkit-writing-mode: vertical-rl;
-	-moz-writing-mode: vertical-rl;
-	-ms-writing-mode: vertical-rl;
-	writing-mode: vertical-rl;
-	-webkit-text-orientation: upright;
-	-moz-text-orientation: upright;
-	-ms-text-orientation: upright;
-	text-orientation: upright;
-}
-
-// fix for offset Japanese fonts in IE11
-.ie11Fix {
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { padding-top: 0.2em; }
+  color: inherit;
 }

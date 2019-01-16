@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+body {
+  background: $white;
+  // class for when displaying overlays/modals - doesn't work on iOS Safari
+  &.scrollLock {
+    overflow-y: hidden;
+  }
+}
+
+main {
+  padding: 3em 1em;
+  @include min-md {
+    padding: 4em 0;
+  }
+}
